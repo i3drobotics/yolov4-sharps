@@ -1,0 +1,9 @@
+/home/i3dr/Desktop/YOLOv4/darknet/CMakeFiles/install.dir
+/home/i3dr/Desktop/YOLOv4/darknet/CMakeFiles/list_install_components.dir
+/home/i3dr/Desktop/YOLOv4/darknet/CMakeFiles/rebuild_cache.dir
+/home/i3dr/Desktop/YOLOv4/darknet/CMakeFiles/dark.dir
+/home/i3dr/Desktop/YOLOv4/darknet/CMakeFiles/uselib.dir
+/home/i3dr/Desktop/YOLOv4/darknet/CMakeFiles/install/strip.dir
+/home/i3dr/Desktop/YOLOv4/darknet/CMakeFiles/install/local.dir
+/home/i3dr/Desktop/YOLOv4/darknet/CMakeFiles/darknet.dir
+/home/i3dr/Desktop/YOLOv4/darknet/CMakeFiles/edit_cache.dir
