@@ -47,3 +47,14 @@ disp_out = Image.open('/PATH/TO/THE/BLANK/IMAGE/TO/PAINT-OUT/displacement-out.pn
 disp_in = Image.open('/PATH/TO/THE/BLANK/IMAGE/TO/PAINT-IN/displacement-in.png')
 ```
 this PATH depends from user to user, not necessarily needing to follow the structure outlined at the beginning of this README, it just needs to go to the images that will be used to be 'painted on'.
+
+Thus, we start the painting, painting displacement going inwards and outwards works the same, the only separate one is the scale, which will always be a displacement going out of the plate and will, most likely, cover the whole plate without any random rotation, or resizing unlike all the other defects that we paint on the plates.
+
+The way painting works is we create three different arrays, which will be _"brush arrays"_ and a special one that is the _"scale array"_, these are created appending the ```*.png``` files that we have in the _brushes_ directory, again following the file structure mentioned above.
+
+Next, we paint the scale on the mask of the _displacement-out_ since it is a defect that comes out along the line of sight if one is looking at the plate along the z-axis, just like our set of cameras for stereo vision. Once the plate is full of scale, we need to give the number of defects we want our generator to add to the now _scaly_ plate, it is defaulted at five random defects but it can be modified within the script to be as many defects as one would like. 
+```
+n_def = 5
+```
+_**Note.** The amount of defects does modify the time the generator needs to work, the step that takes the longest is filling the plate with scale, but if we then added 100 defects on top of the scale the time needed may be longer than the 5-12 seconds it takes at lower numbers of defects._
+
