@@ -6,13 +6,9 @@ The paths need to be changed to paths to your python packages
 
 The file structure used whilst writing this add-on was:
 
- steel-blender 
- 
+```steel-blender 
  ├── brushes ~~ at this level is the image for scale-only
- 
  │   ├── in
- 
  │   └── out
- 
  └── defects ~~ this folder is where we saved the images with the defects
- 
+ ```
