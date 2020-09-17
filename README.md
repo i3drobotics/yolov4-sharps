@@ -33,7 +33,8 @@ After the _shader_ is where we add the different defects that were generated ran
 
 We use ```pillow``` and ```opencv``` to work the images that we need, we first need to read the masks that we have created in ```gimp``` or any other image editor like ```MS Paint``` or ```Photoshop```, the only necessary thing with this image is that the height is five times the width, which can be seen in lines 34 and 35:
 
-```width = 1024
+```
+width = 1024
 height = 5120
 ```
 once we have the images we ope them using ```PIL```
