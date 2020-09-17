@@ -19,3 +19,6 @@ In order to get blender's ```python``` to understand and use ```pillow``` and ``
 path_to_packages = '/PATH/TO/LOCAL/PYTHON/3.7/site-packages'
 sys.path.append(path_to_packages)
 ```
+After importing all the relevant packages we then change some options in ```blender``` to work in the ```Cycles``` render engine, with the ```experimental``` feature and add an option for it to be computed using the GPU.
+
+The code works by creatig an add-on in the ```3D-View```, which is the menu that appears where you are in _Object mode_ inside ```blender```. The way the add-on is written follows ```blender```'s naming rules, and types; there are plenty of different functions that could in principle be added here, to see them one can simply go to ```blender```'s 
