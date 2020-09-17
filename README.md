@@ -30,3 +30,15 @@ Before fully going into how the "painting" works within the code, it is importan
 After the _shader_ is where we add the different defects that were generated randomly within the script, normally called _displacement-in_ or _out_, and both of these masks are used as _bumps_ and _displacements_ within the node interface in ```blender```, this is the reason why we have changed the render engine to ```Cycles >> Experimental``` and changed the settings within the material to add _bump_ and _displacement_. **Note.** Most of the necessary settings for this to work are modified within the script between lines 72-76.
 
 # Painting random defects
+
+We use ```pillow``` and ```opencv``` to work the images that we need, we first need to read the masks that we have created in ```gimp``` or any other image editor like ```MS Paint``` or ```Photoshop```, the only necessary thing with this image is that the height is five times the width, which can be seen in lines 34 and 35:
+```width = 1024
+height = 5120
+```
+once we have the images we ope them using ```PIL```
+```## ~~~~~~~~~~~~~ DRAWING THE DEFFECTS ~~~~~~~~~~~~~
+# Image that will be 'the background' plate where the defects will be drawn
+disp_out = Image.open('/PATH/TO/THE/BLANK/IMAGE/TO/PAINT-OUT/displacement-out.png')
+disp_in = Image.open('/PATH/TO/THE/BLANK/IMAGE/TO/PAINT-IN/displacement-in.png')
+```
+this PATH depends from user to user, not necessarily needing to follow the structure outlined at the beginning of this README, it just needs to go to the images that will be used to be 'painted on'.
