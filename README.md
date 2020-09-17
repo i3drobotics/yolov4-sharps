@@ -58,3 +58,10 @@ n_def = 5
 ```
 _**Note.** The amount of defects does modify the time the generator needs to work, the step that takes the longest is filling the plate with scale, but if we then added 100 defects on top of the scale the time needed may be longer than the 5-12 seconds it takes at lower numbers of defects._
 
+The defects are placed on the plate by randomly taking ```(x,y)``` in ```(width, height)``` and placing them on the mask, painting the defect 'white' on the 'black' (blank) image we started with, this is so ```blender``` understands that the white patches are the ones to take into account whilst rendering the material. In lines 162-166 it can be seen that we save three images instead of two, this is to be able to see the plates without scale, since sometimes one would like to see _only_ the defects going _in_ and _out_ instead of a _scaly_ plate with defects. One can toggle between these by just changing the _displacements-out-scale_ image for _displacements-out_ in the _image texture_ node in the _shading_ tab in ```blender```.
+
+The only thing that would be left to do is to render the images or animation needed with the plate. It is important to note that the way this script was written was so we can add defect brushes in the future so our library of defects can be even bigger, and more realistic.
+
+After the plate is generated and rendered, one can just press the _Generate random plate_ button again and our previous plate will be deleted and a new one will be created with different defects.
+
+## Future additions
